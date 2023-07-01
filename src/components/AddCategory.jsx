@@ -9,6 +9,7 @@ export const AddCategory = ({ onNewCategory }) => {
    };
 
    const onSubmit = (event) => {
+      console.log('Hello world from submit');
       event.preventDefault();
 
       if (inputValue.trim().length <= 1) {
@@ -20,7 +21,7 @@ export const AddCategory = ({ onNewCategory }) => {
    };
 
    return (
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} aria-label="form">
          <input type="text" placeholder="Search Gif" value={inputValue} onChange={onInputChange} />
       </form>
    );
